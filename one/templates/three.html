@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Request Form</title>
+</head>
+<body>
+    <h1>Payment Request Form</h1>
+    <form method="post" action="http://127.0.0.1:8000/bhaskar">
+        {% csrf_token %}
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="mobile_number">Mobile Number:</label><br>
+        <input type="tel" id="mobile_number" name="mobile_number" pattern="[0-9]{10}" required><br>
+        <label for="upi_id">UPI ID:</label><br>
+        <input type="text" id="upi_id" name="upi_id"><br>
+        <button type="submit">Request Payment</button>
+    </form>
+</body>
+</html>
+
