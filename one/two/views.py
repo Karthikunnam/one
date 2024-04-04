@@ -7,8 +7,12 @@ from django.shortcuts import render
 def welcome_view(request):
     return render(request, 'a.html')
 def first_view(request):
-    return render(request, 'three.html')    
+    return render(request, 'two.html')  
+def second_view(request):
+    return render(request, 'three.html')
 
+def third_view(request):
+    return render(request, 'four.html')
 
 # payments/views.py
 
@@ -19,7 +23,6 @@ def p_view(request):
         name = request.POST.get('name')
         mobile_number = request.POST.get('mobile_number')
         upi_id = request.POST.get('upi_id')
-        public_message_to_sns()
 
         
         # Print form data to console
@@ -38,7 +41,7 @@ def p_view(request):
 
 import boto3
 
-def public_message_to_sns():
+def public_message_to_sns(mobile_number):
     topic_arn = "arn:aws:sns:ap-south-1:767397686043:first"
 
 # Region name where the SNS topic resides

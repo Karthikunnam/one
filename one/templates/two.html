@@ -34,15 +34,22 @@
   </style>
 </head>
 <body>
-  <div class="pass">
+  <div class="pass" id="monthlyPass">
     <h2>Monthly Pass</h2>
     <p>Price: ₹349</p>
-    <button>Buy Now</button>
+    <button onclick="redirectToNagolu()">Buy Now</button>
   </div>
   <div class="pass">
     <h2>90 Days Pass</h2>
     <p>Price: ₹1099</p>
     <button>Buy Now</button>
   </div>
+
+  <script>
+    function redirectToNagolu() {
+      // Redirect the user to nagolu.html
+      window.location.href = "nagolu";
+    }
+  </script>
 </body>
 </html>
