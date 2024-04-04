@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path
 from two.views import welcome_view
 from two.views import first_view
-from two.views import p_view
 from two.views import second_view
 from two.views import third_view
 urlpatterns = [
@@ -26,6 +25,5 @@ urlpatterns = [
     path('karthik', welcome_view),
     path('unnam', first_view),
     path('nagolu', second_view),
-    path('bhaskar',p_view),
     path('begin', third_view)
 ]
