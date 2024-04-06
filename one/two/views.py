@@ -26,7 +26,7 @@ def third_view(request):
         upi_id = request.POST.get('upi_id')
         
         # Print form data to console
-        print("Name:", name)
+        print("Nam:", name)
         print("Mobile Number:", mobile_number)
         print("UPI ID:", upi_id)
         public_message_to_sns()
